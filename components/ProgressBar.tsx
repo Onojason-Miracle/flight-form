@@ -33,7 +33,6 @@ const steps = [
   { id: 3, label: "Info", icon: <FaChartLine /> },
   { id: 4, label: "Miles", icon: <FaBook /> },
   { id: 5, label: "Help", icon: <FaHeart /> },
-
 ];
 
 export default function ProgressBar({ currentStep }: Props) {
@@ -57,7 +56,7 @@ export default function ProgressBar({ currentStep }: Props) {
                   : "border-white-500 bg-white "
               }`}
             >
-              <span className= " text-black">{step.icon}</span>
+              <span className=" text-black">{step.icon}</span>
             </div>
           ))}
         </div>

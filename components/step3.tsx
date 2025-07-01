@@ -1,4 +1,3 @@
-// app/@components/Step3.tsx
 "use client";
 
 import { useContext } from "react";
@@ -17,16 +16,13 @@ export default function Step3({
 
   return (
     <div className="step3Form">
-    
- <div className="flightInfo">
-       <div className="step3Header">
-         <h1>Ticket Information</h1>
-       </div>
-
+      <div className="flightInfo">
+        <div className="step3Header">
+          <h1>Ticket Information</h1>
+        </div>
 
         <table className="w-full text-sm sm:table table-auto md:table sm:flex block">
           <thead className=" text-red sm:table-row-group block inline-block sm:inline sm:w-auto  w-1/2">
-         
             <tr className="flex flex-col sm:table-row">
               <th className="px-6 py-3 block sm:table-cell">
                 {" "}
@@ -59,14 +55,14 @@ export default function Step3({
             </tr>
           </thead>
 
-        
-
           <tbody className="text-center  text-white sm:table-row-group block inline-block sm:inline sm:w-auto w-1/2">
             <tr className="flex flex-col sm:table-row">
               <td className="px-6 py- block sm:table-cell">{formData.from}</td>
               <td className="px-6 py-3 block sm:table-cell">{formData.to}</td>
               <td className="px-6 py-3">{formData.ticketType}</td>
-              <td className="px-6 py-3 block sm:table-cell">{formData.departDate}</td>
+              <td className="px-6 py-3 block sm:table-cell">
+                {formData.departDate}
+              </td>
               <td className="px-6 py-3 block sm:table-cell">21143</td>
               <td className="px-6 py-3 block sm:table-cell">2129</td>
               <td className="px-6 py-3 block sm:table-cell">32.7</td>

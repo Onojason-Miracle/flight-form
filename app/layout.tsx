@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import Head from "next/head";
 import "./globals.css";
 
 // font
-const openSans = Open_Sans({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-open-sans",
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -31,9 +31,7 @@ export default function RootLayout({
         />
       </Head>
 
-      <body className={`${openSans.variable} font-sans antialiased`}>
-        {children}
-      </body>
+      <body className="font-sans antialiased">{children}</body>
     </html>
   );
 }

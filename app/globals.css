@@ -271,12 +271,13 @@ body {
 }
 
 /* footer */
-footer{
+footer {
   border-top: 2px solid white;
   padding-bottom: 3%;
+  width: 100%;
 }
 
-footer p{
+footer p {
   margin-top: 2%;
   width: 90%;
   margin: auto;
@@ -344,7 +345,7 @@ footer p{
     margin-top: 5%;
   }
 
-   /* step4 */
+  /* step4 */
 
   .step4Form {
     width: 80%;
@@ -364,14 +365,12 @@ footer p{
 
   .imgDiv {
     width: 100%;
-   
   }
 
   .imgDiv img {
     width: 100%;
     height: 400px;
     object-fit: cover;
-    
   }
 
   .textDiv {
@@ -380,30 +379,27 @@ footer p{
     padding-top: 2%;
   }
 
-      /* step5 */
-.inner {
-  width: 90%;
-  margin: auto;
-  margin-top: 6%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-}
+  /* step5 */
+  .inner {
+    width: 90%;
+    margin: auto;
+    margin-top: 6%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
 
-.step5Btn {
-  display: flex;
-  width: 40%;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 10%;
-}
+  .step5Btn {
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10%;
+  }
 
-.label {
-  
-  height: 150px;
-}
-
-
+  .label {
+    height: 150px;
+  }
 }
 
 /* Tablet - 1024px or smaller */
@@ -467,7 +463,7 @@ footer p{
     margin-top: 5%;
   }
 
- /* step4 */
+  /* step4 */
 
   .step4Form {
     width: 90%;
@@ -487,14 +483,12 @@ footer p{
 
   .imgDiv {
     width: 100%;
-   
   }
 
   .imgDiv img {
     width: 100%;
     height: 400px;
     object-fit: cover;
-    
   }
 
   .textDiv {
@@ -503,30 +497,27 @@ footer p{
     padding-top: 2%;
   }
 
-      /* step5 */
-.inner {
-  width: 90%;
-  margin: auto;
-  margin-top: 6%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-}
+  /* step5 */
+  .inner {
+    width: 90%;
+    margin: auto;
+    margin-top: 6%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
 
-.step5Btn {
-  display: flex;
-  width: 50%;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 10%;
-}
+  .step5Btn {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10%;
+  }
 
-.label {
-  
-  height: 150px;
-}
-
-
+  .label {
+    height: 150px;
+  }
 }
 
 /* Tablet / Large phones - 768px or smaller */
@@ -616,7 +607,6 @@ footer p{
     width: 100%;
     height: 500px;
     object-fit: cover;
-    
   }
 
   .textDiv {
@@ -625,29 +615,27 @@ footer p{
     padding-top: 2%;
   }
 
-    /* step5 */
-.inner {
-  width: 90%;
-  margin: auto;
-  margin-top: 6%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-}
+  /* step5 */
+  .inner {
+    width: 90%;
+    margin: auto;
+    margin-top: 6%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
 
-.step5Btn {
-  display: flex;
-  width: 60%;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 10%;
-}
+  .step5Btn {
+    display: flex;
+    width: 60%;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10%;
+  }
 
-.label {
-  
-  height: 150px;
-}
-
+  .label {
+    height: 150px;
+  }
 }
 
 /* Small mobile - 640px or smaller */
@@ -783,21 +771,20 @@ footer p{
   }
 
   /* step5 */
-.inner {
-  width: 90%;
-  margin: auto;
-  margin-top: 6%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
+  .inner {
+    width: 90%;
+    margin: auto;
+    margin-top: 6%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 
-.step5Btn {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 10%;
-}
-
+  .step5Btn {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10%;
+  }
 }
