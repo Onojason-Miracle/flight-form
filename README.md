@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ✈️ Multi-Step Flight Booking Form
 
-## Getting Started
+A fully responsive, multi-step flight booking form built with **Next.js**, **TypeScript**, and **Tailwind CSS**. 
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🔗 Live Demo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+👉 [View Live Site on Vercel](https://your-live-site-link.vercel.app)  
+📁 [View Source on GitHub](https://github.com/Onojason-Miracle/flight-form)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧰 Tech Stack
 
-## Learn More
+- [Next.js 14](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [React Hook Form](https://react-hook-form.com/)
+- [Zod](https://zod.dev/) (for validation)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📸 Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- ✅ 6-step multi-page registration form:
+  - Step 1: Flight origin, destination & dates
+  - Step 2: Ticket type selection
+  - Step 3: Ticket summary & pricing
+  - Step 4: Miles donation awareness
+  - Step 5: Choose a foundation (with icons)
+  - Step 6: Final review before submission
 
-## Deploy on Vercel
+- ✅ Validation using Zod + React Hook Form
+- ✅ Step-by-step progress indicator at the top
+- ✅ Responsive for all screen sizes
+- ✅ Global form state using React Context API
+- ✅ Deployed with Vercel or Netlify
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
