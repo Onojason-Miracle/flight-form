@@ -16,60 +16,66 @@ export default function Step3({
   const { formData } = useContext(FormContext);
 
   return (
-    <div className="p-6 space-y-6">
-      <h2 className="text-xl font-semibold text-white">Summary</h2>
+    <div className="step3Form">
+    
+ <div className="flightInfo">
+       <div className="step3Header">
+         <h1>Ticket Information</h1>
+       </div>
 
-      <div className="bg-gray-800 p-4  w-full rounded space-y-3">
-        <h1>Ticket Information</h1>
-        <table className="min-w-full text-sm table table-auto">
-          <thead className="text-center text-white">
-            <tr>
-              <th className="px-6 py-3">
+
+        <table className="w-full text-sm sm:table table-auto md:table sm:flex block">
+          <thead className=" text-red sm:table-row-group block inline-block sm:inline sm:w-auto  w-1/2">
+         
+            <tr className="flex flex-col sm:table-row">
+              <th className="px-6 py-3 block sm:table-cell">
                 {" "}
                 <strong>From</strong>
               </th>
-              <th className="px-6 py-3">
+              <th className="px-6 py-3 block sm:table-cell">
                 {" "}
                 <strong>To</strong>
               </th>
-              <th className="px-6 py-3">
-                {" "}
-                <strong>Depart</strong>
-              </th>
-              <th className="px-6 py-3">
-                {" "}
-                <strong>Return</strong>
-              </th>
-              <th className="px-6 py-3">
+              <th className="px-6 py-3 block sm:table-cell">
                 {" "}
                 <strong>Type</strong>
               </th>
-              <th className="px-6 py-3">
+              <th className="px-6 py-3 block sm:table-cell">
+                {" "}
+                <strong>Date</strong>
+              </th>
+              <th className="px-6 py-3 block sm:table-cell">
+                {" "}
+                <strong>Price</strong>
+              </th>
+              <th className="px-6 py-3 block sm:table-cell">
+                {" "}
+                <strong>Miles</strong>
+              </th>
+              <th className="px-6 py-3 block sm:table-cell">
                 {" "}
                 <strong>Gift Miles</strong>
-              </th>
-              <th className="px-6 py-3">
-                {" "}
-                <strong>Total</strong>
               </th>
             </tr>
           </thead>
 
-          <tbody className="text-center text-white">
-            <tr>
-              <td className="px-6 py-3">{formData.from}</td>
-              <td className="px-6 py-3">{formData.to}</td>
-              <td className="px-6 py-3">{formData.departDate}</td>
-              <td className="px-6 py-3">{formData.returnDate}</td>
+        
+
+          <tbody className="text-center  text-white sm:table-row-group block inline-block sm:inline sm:w-auto w-1/2">
+            <tr className="flex flex-col sm:table-row">
+              <td className="px-6 py- block sm:table-cell">{formData.from}</td>
+              <td className="px-6 py-3 block sm:table-cell">{formData.to}</td>
               <td className="px-6 py-3">{formData.ticketType}</td>
-              <td className="px-6 py-3">🎁 30 Miles</td>
-              <td className="px-6 py-3">$500</td>
+              <td className="px-6 py-3 block sm:table-cell">{formData.departDate}</td>
+              <td className="px-6 py-3 block sm:table-cell">21143</td>
+              <td className="px-6 py-3 block sm:table-cell">2129</td>
+              <td className="px-6 py-3 block sm:table-cell">32.7</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <div className="flex justify-between mt-10">
+      <div className="formInfoBtn">
         <button
           type="button"
           onClick={onBack}

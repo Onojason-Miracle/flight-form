@@ -2,6 +2,7 @@
 "use client";
 import { createContext, useState, ReactNode } from "react";
 
+
 export const FormContext = createContext<any>(null);
 
 export const FormProvider = ({ children }: { children: ReactNode }) => {
@@ -9,7 +10,10 @@ export const FormProvider = ({ children }: { children: ReactNode }) => {
 
   return (
     <FormContext.Provider value={{ formData, setFormData }}>
-      {children}
+    <div className=" form-details">
+    
+       {children}
+    </div>
     </FormContext.Provider>
   );
 };

@@ -33,7 +33,7 @@ const steps = [
   { id: 3, label: "Info", icon: <FaChartLine /> },
   { id: 4, label: "Miles", icon: <FaBook /> },
   { id: 5, label: "Help", icon: <FaHeart /> },
-  { id: 6, label: "Review", icon: <MdRateReview /> },
+
 ];
 
 export default function ProgressBar({ currentStep }: Props) {
@@ -51,13 +51,13 @@ export default function ProgressBar({ currentStep }: Props) {
           {steps.map((step) => (
             <div
               key={step.id}
-              className={`flex items-center justify-center w-10 h-10 rounded-full border-2 ${
+              className={`flex items-center justify-center w-10 h-10 rounded-full border-2  ${
                 currentStep >= step.id
-                  ? "border-cyan-500 bg-cyan-500"
-                  : "border-white-500 bg-white"
+                  ? "border-cyan-500 bg-cyan-500 "
+                  : "border-white-500 bg-white "
               }`}
             >
-              <span className="text-white">{step.icon}</span>
+              <span className= " text-black">{step.icon}</span>
             </div>
           ))}
         </div>

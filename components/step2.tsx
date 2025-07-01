@@ -42,12 +42,13 @@ export default function Step2({
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="p-6 space-y-6 mt-6">
-      <h2 className="text-xl font-semibold text-white">
+    <form onSubmit={handleSubmit(onSubmit)} className=" step2Form">
+      <h2 className="step2Header">
         What type of ticket do you want?
       </h2>
-
-      <div className="grid grid-cols-2 gap-6 mt-8">
+<div className="step2InnerDiv">
+  
+      <div className="grid grid-cols-2 sm:gap-2 gap-6">
         <label className="cursor-pointer border border-gray-500 rounded p-4 flex bg-gray-700 hover:bg-cyan-600  items-center justify-center">
           <input
             type="radio"
@@ -79,11 +80,11 @@ export default function Step2({
         <p className="text-red-500 text-sm">{errors.ticketType.message}</p>
       )}
 
-      <div className="flex justify-between mt-10">
+      <div className="step2Btn">
         <button
           type="button"
           onClick={onBack}
-          className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-2 rounded-full flex items-center justify-center gap-10 cursor-pointer"
+          className="bg-white hover:bg-gray-300 text-black px-6 py-2 rounded-full flex items-center justify-center gap-10 cursor-pointer"
         >
           <FaArrowLeft />
           Before
@@ -96,6 +97,7 @@ export default function Step2({
           <FaArrowRight />
         </button>
       </div>
+</div>
     </form>
   );
 }

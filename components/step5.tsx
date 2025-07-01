@@ -7,21 +7,39 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useContext } from "react";
 import { FormContext } from "../context/FormContext";
 
+
+import {
+  FaPlane,
+  FaChartLine,
+  FaBook,
+  FaHeart,
+  FaCrown,
+  FaUser,
+  FaHome,
+  FaGlobe,
+  FaHandsHelping,
+  FaHandshake,
+  FaArrowLeft,
+  FaArrowRight,
+  FaMapMarkedAlt,
+  FaSearch,
+  FaMapMarkerAlt,
+  FaThLarge,
+  FaBars,
+} from "react-icons/fa";
+
+import { FaSignsPost } from "react-icons/fa6";
+import { MdOutlineSummarize, MdRateReview, MdAnalytics } from "react-icons/md";
+
 const schema = z.object({
-  foundation: z.enum(["UNICEF", "Save the Children", "Red Cross"], {
+  foundation: z.enum(["UNICEF", "Save the Children", "Red Cross", "World Vision"], {
     errorMap: () => ({ message: "Please choose a foundation" }),
   }),
 });
 
 type Step5Data = z.infer<typeof schema>;
 
-export default function Step5({
-  onNext,
-  onBack,
-}: {
-  onNext: () => void;
-  onBack: () => void;
-}) {
+export default function Step5({ onNext, onBack }: { onNext: () => void; onBack: () => void }) {
   const { formData, setFormData } = useContext(FormContext);
 
   const {
@@ -40,24 +58,36 @@ export default function Step5({
     onNext();
   };
 
-  return (
-    <form onSubmit={handleSubmit(onSubmit)} className="p-6 space-y-6">
-      <h2 className="text-xl font-semibold text-white">Donate Miles</h2>
-      <p className="text-gray-300">Choose a foundation to support:</p>
+  const foundations = [
+    { name: "UNICEF", icon: <FaHome/> },
+    { name: "Save the Children", icon: <FaGlobe/> },
+    { name: "Red Cross", icon:  <FaHandshake/> },
+    { name: "World Vision", icon: <FaHandsHelping/>}
+  ];
 
-      <div className="space-y-4">
-        {["UNICEF", "Save the Children", "Red Cross"].map((org) => (
+  return (
+    <form onSubmit={handleSubmit(onSubmit)} className="step2Form">
+      <h2 className="step4Heading">Who do you want to help?</h2>
+    
+
+      <div className="inner ">
+        {foundations.map((org) => (
           <label
-            key={org}
-            className="cursor-pointer flex items-center gap-2 border border-gray-500 rounded p-3 hover:bg-cyan-600"
+            key={org.name}
+            className=" label  bg-gray-700  hover:bg-cyan-600 cursor-pointer"
           >
             <input
               type="radio"
-              value={org}
+              value={org.name}
               {...register("foundation")}
-              className="accent-cyan-500"
+              className="accent-cyan-500 hidden"
             />
-            <span className="text-white">{org}</span>
+           
+           
+              <p className="icon">{org.icon}</p>
+              <p className=" text-center">{org.name}</p>
+            
+            
           </label>
         ))}
       </div>
@@ -66,21 +96,23 @@ export default function Step5({
         <p className="text-red-500 text-sm">{errors.foundation.message}</p>
       )}
 
-      <div className="flex justify-between mt-6">
-        <button
-          type="button"
-          onClick={onBack}
-          className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-2 rounded"
-        >
-          Before
-        </button>
-        <button
-          type="submit"
-          className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded"
-        >
-          Submit
-        </button>
-      </div>
+       <div className="step5Btn">
+              <button
+                type="button"
+                onClick={onBack}
+                className="bg-white hover:bg-gray-300 text-black px-6 py-2 rounded-full flex items-center justify-center gap-10 cursor-pointer"
+              >
+                <FaArrowLeft />
+                Before
+              </button>
+              <button
+                type="submit"
+                className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-full flex items-center justify-center gap-10 cursor-pointer"
+              >
+                submit
+                <FaArrowRight />
+              </button>
+            </div>
     </form>
   );
 }
