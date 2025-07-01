@@ -38,8 +38,15 @@ export default function Step5({
     formState: { errors },
   } = useForm<Step5Data>({
     resolver: zodResolver(schema),
+
     defaultValues: {
-      foundation: formData.foundation || undefined,
+      foundation:
+        formData.foundation === "UNICEF" ||
+        formData.foundation === "Miracle O" ||
+        formData.foundation === "Red Cross" ||
+        formData.foundation === "Onojason"
+          ? formData.foundation
+          : "UNICEF",
     },
   });
 

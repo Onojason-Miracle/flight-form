@@ -32,7 +32,10 @@ export default function Step2({
   } = useForm<Step2Data>({
     resolver: zodResolver(schema),
     defaultValues: {
-      ticketType: formData.ticketType || undefined,
+      ticketType:
+        formData.ticketType === "Business" || formData.ticketType === "Economy"
+          ? formData.ticketType
+          : "Economy",
     },
   });
 
