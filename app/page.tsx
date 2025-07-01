@@ -16,9 +16,11 @@ export default function Home() {
   const prevStep = () => setStep((prev) => prev - 1);
 
   return (
-    <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center">
+    <main className=" homepage">
+      <ProgressBar currentStep={step} />
+      
       <FormProvider>
-        <ProgressBar currentStep={step} />
+        
 
         {step === 1 && <Step1 onNext={nextStep} />}
         {step === 2 && <Step2 onNext={nextStep} onBack={prevStep} />}
